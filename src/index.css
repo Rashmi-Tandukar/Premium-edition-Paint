@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  /* === PREMIUM EDITION PAINT THEME === */
+
+  /* Primary: Royal Blue (main can body) */
+  --red: #1a3a9f;
+  --red-dark: #112d82;
+
+  /* Backgrounds & Darks */
+  --dark: #0d1a3a;
+  --darker: #07102a;
+  --navy: #0a1628;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --offwhite: #f4f6fb;
+  --gray-100: #f0f3fa;
+  --gray-200: #dde4f0;
+  --gray-400: #9aaac8;
+  --gray-600: #5a6a8a;
+  --gray-800: #1e2d50;
+
+  /* Accent: Gold (can lid & badge trim) */
+  --gold: #c9970a;
+  --gold-light: #f0c040;
+  --gold-dark: #a07808;
+
+  /* Accent: Shield Green (logo) */
+  --green: #3abf2e;
+  --green-dark: #2a9e20;
+
+  /* Tabs / pills active color */
+  --tab-active: #3abf2e;
+
+  /* Typography */
+  --font-main: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--dark); background: #fff; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; outline: none; font-family: var(--font-main); }
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sec-title {
+  font-family: var(--font-main);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  font-weight: 900;
+  color: var(--dark);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.sec-sub {
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  margin-top: 8px;
+  line-height: 1.65;
+}
+
+/* Primary CTA — Royal Blue */
+.btn-red {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--red); color: #fff;
+  font-family: var(--font-main); font-weight: 700; font-size: 0.8rem;
+  padding: 10px 22px; border-radius: 4px;
+  transition: background 0.2s, transform 0.2s;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+/* Gold CTA Button */
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--gold); color: #fff;
+  font-family: var(--font-main); font-weight: 700; font-size: 0.8rem;
+  padding: 10px 22px; border-radius: 4px;
+  transition: background 0.2s, transform 0.2s;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.btn-gold:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+/* Green CTA Button */
+.btn-green {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--green); color: #fff;
+  font-family: var(--font-main); font-weight: 700; font-size: 0.8rem;
+  padding: 10px 22px; border-radius: 4px;
+  transition: background 0.2s, transform 0.2s;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.btn-green:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+/* Outline White (for dark/blue backgrounds) */
+.btn-outline-white {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: transparent; color: #fff;
+  font-family: var(--font-main); font-weight: 700; font-size: 0.8rem;
+  padding: 10px 22px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.6);
+  transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+/* Outline Gold */
+.btn-outline-gold {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: transparent; color: var(--gold);
+  font-family: var(--font-main); font-weight: 700; font-size: 0.8rem;
+  padding: 10px 22px; border-radius: 4px; border: 2px solid var(--gold);
+  transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.btn-outline-gold:hover { background: var(--gold); color: #fff; }
+
+/* Dark Navy Button */
+.btn-dark {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--navy); color: #fff;
+  font-family: var(--font-main); font-weight: 700; font-size: 0.8rem;
+  padding: 10px 22px; border-radius: 4px;
+  transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.btn-dark:hover { background: var(--dark); }
+
+/* Scrollbar — Royal Blue accent */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f0f3fa; }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+/* Scroll Reveal */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
