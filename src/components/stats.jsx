@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import styles from './Stats.module.css'
+import styles from './stats.module.css'
 
 const stats = [
   { value: 25, suffix: '+', label: 'Years of Experience' },
