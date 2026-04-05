@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import styles from './Features.module.css'
+import styles from './features.module.css'
 
 const features = [
   {
