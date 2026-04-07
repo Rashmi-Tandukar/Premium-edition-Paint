@@ -92,7 +92,7 @@ export default function ProductDetail({ product, onClose }) {
     // WhatsApp message
     const colorLabel = selectedColor !== null ? ALL_COLORS[selectedColor].name : 'Not selected'
     const waMsg = `Hello! I'd like to order the following:\n\n🛒 *${product.name}*\n🎨 Colour: ${colorLabel}\n📦 Size: ${selectedSize}\n💰 Price: ${sizeData.price}\n\nPlease confirm availability. Thank you!`
-    window.open(`https://wa.me/+44 7878 962923?text=${encodeURIComponent(waMsg)}`, '_blank')
+    window.open(`https://wa.me/+447878962923?text=${encodeURIComponent(waMsg)}`, '_blank')
   }
 
   const handleBuyNow = () => {
@@ -112,7 +112,7 @@ export default function ProductDetail({ product, onClose }) {
     const colorLabel = selectedColor !== null ? ALL_COLORS[selectedColor].name : 'Not selected'
     const price = sizeData.price ?? product.price ?? 'N/A'
     const waMsg = `Hello! I want to buy the following:\n\n🛒 *${product.name}*\n🎨 Colour: ${colorLabel}\n📦 Size: ${selectedSize}\n💰 Price: ${price}\n\nPlease confirm and share payment details. Thank you!\n\n_We will reach out to you shortly to confirm your order._`
-    window.open(`https://wa.me/9869936977?text=${encodeURIComponent(waMsg)}`, '_blank')
+    window.open(`https://wa.me/+447878962923?text=${encodeURIComponent(waMsg)}`, '_blank')
     
   }
 

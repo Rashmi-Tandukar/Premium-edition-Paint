@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import styles from './stats.module.css'
 
 const stats = [
-  { value: 25, suffix: '+', label: 'Years of Experience' },
-  { value: 120, suffix: '+', label: 'Paint Products' },
+  { value: 3, suffix: '+', label: 'Years of Experience' },
+  { value: 100, suffix: '+', label: 'Paint Products' },
   { value: 50, suffix: 'k+', label: 'Happy Customers' },
   { value: 98, suffix: '%', label: 'Satisfaction Rate' },
 ]

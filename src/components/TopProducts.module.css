@@ -283,33 +283,198 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 1024px) {
+
+/* Large desktops: 4 columns (default, already set above) */
+
+/* Medium desktops / tablets landscape */
+@media (max-width: 1280px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 16px;
   }
 
-  .tabs {
-    gap: 6px;
+  .title {
+    font-size: 2rem;
   }
 
-  .tab {
-    font-size: 0.68rem;
-    padding: 7px 14px;
+  .imgWrap {
+    height: 300px;
+  }
+}
+
+/* Tablets portrait */
+@media (max-width: 768px) {
+  .section {
+    padding: 36px 0;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .titleRow {
+    margin-bottom: 24px;
+    padding: 0 16px;
+  }
+
+  .carouselRow {
+    padding: 0 4px;
   }
 
   .arrowBtn {
     width: 28px;
     height: 28px;
+    margin: 0 3px;
   }
 
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .imgWrap {
+    height: 240px;
+  }
+
+  .productType {
+    font-size: 0.85rem;
+  }
+
+  .name {
+    font-size: 0.82rem;
+  }
+
+  .price {
+    font-size: 0.95rem;
+  }
+
+  .cartBtn {
+    font-size: 0.72rem;
+    padding: 8px;
+  }
+
+  .chooseBtn {
+    font-size: 0.76rem;
+    padding: 9px;
+  }
+}
+
+/* Large phones / small tablets */
+@media (max-width: 600px) {
   .section {
-    padding: 32px 0;
+    padding: 28px 0;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .arrowBtn {
+    width: 26px;
+    height: 26px;
+    margin: 0 2px;
+  }
+
+  .imgWrap {
+    height: 190px;
+  }
+
+  .metaRow {
+    padding: 4px 8px 6px;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .stars svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .sizeSelect select {
+    font-size: 0.65rem;
+    padding: 2px 4px;
+  }
+
+  .info {
+    padding: 4px 8px 8px;
+  }
+
+  .name {
+    font-size: 0.75rem;
+  }
+
+  .oldPrice {
+    font-size: 0.7rem;
+  }
+
+  .price {
+    font-size: 0.88rem;
+  }
+
+  .btnGroup {
+    padding: 0 8px 10px;
+    gap: 6px;
+  }
+
+  .cartBtn {
+    font-size: 0.65rem;
+    padding: 7px 6px;
+    letter-spacing: 0.02em;
+  }
+
+  .chooseBtn {
+    font-size: 0.68rem;
+    padding: 8px 6px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .imgWrap {
+    height: 160px;
+  }
+
+  .carouselRow {
+    padding: 0 2px;
+  }
+
+  .arrowBtn {
+    width: 22px;
+    height: 22px;
+    margin: 0 1px;
+  }
+
+  .arrowBtn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .name {
+    font-size: 0.7rem;
+  }
+
+  .cartBtn,
+  .chooseBtn {
+    font-size: 0.62rem;
+    padding: 6px 4px;
   }
 }

@@ -372,7 +372,7 @@
 
 
 /* ═══════════════════════════════════════
-   TRUST STRIP — Redesigned
+   TRUST STRIP
 ═══════════════════════════════════════ */
 @keyframes trustFadeUp {
   from { opacity: 0; transform: translateY(8px); }
@@ -387,7 +387,6 @@
   overflow: hidden;
 }
 
-/* Subtle diagonal shine */
 .trustStrip::before {
   content: '';
   position: absolute;
@@ -500,12 +499,27 @@
 /* ═══════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════ */
+
+/* Large desktops with tight padding */
+@media (max-width: 1280px) {
+  .annoContent {
+    padding: 0 16px;
+  }
+  .trustCardInner {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+}
+
+/* Medium desktops */
 @media (max-width: 1100px) {
   .phoneBlock { display: none; }
+  .taglineMain { font-size: 0.9rem; }
   .trustCard:last-child { display: none; }
   .trustCard:nth-last-child(2) .trustCardDivider { display: none; }
 }
 
+/* Tablets landscape */
 @media (max-width: 900px) {
   .mToggle { display: flex; }
   .taglineBlock { display: none; }
@@ -513,11 +527,116 @@
   .iconBtn { padding: 8px; }
   .trustCardInner { padding: 14px 16px; gap: 10px; }
   .trustCard:nth-child(n+3) { display: none; }
+  .mainInner { gap: 12px; }
 }
 
+/* Tablets portrait */
+@media (max-width: 768px) {
+  .mainRow {
+    padding: 8px 0;
+  }
+  .mainInner {
+    gap: 8px;
+    padding: 0 12px;
+  }
+  .logoMark img {
+    width: 52px !important;
+    height: 52px !important;
+  }
+  .logoPaint {
+    font-size: 1rem;
+  }
+  .logoTop {
+    font-size: 0.55rem;
+  }
+  .actions {
+    gap: 6px;
+  }
+  .cartBtn {
+    padding: 8px 12px;
+    font-size: 0.7rem;
+  }
+  .cartLabel {
+    display: none;
+  }
+  .cartBtn {
+    padding: 9px;
+    border-radius: 50%;
+    gap: 0;
+  }
+  .trustCardInner {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+  .trustIconWrap {
+    width: 38px;
+    height: 38px;
+  }
+  .trustLabel {
+    font-size: 0.75rem;
+  }
+  .trustSub {
+    font-size: 0.62rem;
+  }
+}
+
+/* Large phones */
 @media (max-width: 600px) {
   .trustStrip { display: none; }
-  .actions { gap: 6px; }
-  .annoContent { gap: 8px; }
+  .actions { gap: 4px; }
+  .annoContent { gap: 8px; padding: 0 12px; }
   .annoDots { display: none; }
+  .annoText { font-size: 0.67rem; }
+  .subLink {
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    gap: 4px;
+  }
+  .subLink svg { display: none; }
+  .mainInner {
+    padding: 0 10px;
+    gap: 6px;
+  }
+  .logoMark img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .logoTop { display: none; }
+  .logoPaint { font-size: 0.9rem; }
+  .iconBtn {
+    padding: 6px;
+  }
+  .wishBtn {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .annoRow { height: 32px; }
+  .annoText { font-size: 0.6rem; }
+  .subLink { display: none; }
+  .annoPulse { width: 6px; height: 6px; }
+  .mainInner { padding: 0 8px; gap: 4px; }
+  .logoMark img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .logoPaint { font-size: 0.8rem; }
+  .logoTag { display: none; }
+  .iconGroup { gap: 0; }
+  .iconBtn { padding: 5px; }
+  .iconBtn svg { width: 16px; height: 16px; }
+  .wishBtn {
+    width: 30px;
+    height: 30px;
+  }
+  .wishBtn svg { width: 16px; height: 16px; }
+  .cartBtn {
+    padding: 7px;
+  }
+  .cartBtn svg { width: 17px; height: 17px; }
+  .mToggle { padding: 6px; }
+  .mToggle span { width: 18px; }
 }
