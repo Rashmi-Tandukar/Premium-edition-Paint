@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
-import Contact from './ContactUs.jsx'
 
 const announcements = [
   '🏆 Price Match Guarantee — Found It Cheaper? We Beat It!',
@@ -56,7 +55,6 @@ export default function Navbar() {
   const [annoFade, setAnnoFade] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [contactOpen, setContactOpen] = useState(false)
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -164,18 +162,23 @@ export default function Navbar() {
                 </a>
 
                 <div className={styles.iconGroup}>
-                  <a href="#" className={styles.iconBtn} title="Help">
+                  {/* ── Help (scrolls to how-it-works section) ── */}
+                  <button
+                    className={styles.iconBtn}
+                    title="Help"
+                    onClick={() => document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' })}
+                  >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
                     </svg>
                     <span>Help</span>
-                  </a>
+                  </button>
 
-                  {/* ── Contact (replaces Login) ── */}
+                  {/* ── Contact (scrolls to contact section) ── */}
                   <button
                     className={styles.iconBtn}
                     title="Contact Us"
-                    onClick={() => setContactOpen(true)}
+                    onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -240,9 +243,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
-      {/* ── Contact Modal ── */}
-      {contactOpen && <Contact onClose={() => setContactOpen(false)} />}
     </>
   )
 }

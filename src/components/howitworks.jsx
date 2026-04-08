@@ -5,8 +5,8 @@ const steps = [
   {
     step: '01',
     title: 'Choose Your Colour',
-    desc: 'Make sure you\u2019ve selected the right product and finish for your surface. Browse our trendiest shades from the Premium Edition Paint range and find your perfect match.',
-    icon: '\uD83C\uDFA8',
+    desc: "Make sure you've selected the right product and finish for your surface. Browse our trendiest shades from the Premium Edition Paint range and find your perfect match.",
+    icon: '🎨',
     accent: '#1a9fd4',
     facts: [
       'Check product title for surface type',
@@ -18,7 +18,7 @@ const steps = [
     step: '02',
     title: 'Prepare the Surface',
     desc: 'Proper preparation is key to achieving the best results. Ensure the surface is clean, dry, and free of dust or debris before you begin.',
-    icon: '\uD83E\uDEA3',
+    icon: '🪣',
     accent: '#1a3a9f',
     facts: [
       'Remove any loose or flaking material',
@@ -29,8 +29,8 @@ const steps = [
   {
     step: '03',
     title: 'Paint',
-    desc: 'Easy to use \u2014 for beginners and professionals. Apply with a brush, roller, or spray. Stir well before use and allow 4 hours between coats.',
-    icon: '\uD83D\uDD8C\uFE0F',
+    desc: 'Easy to use — for beginners and professionals. Apply with a brush, roller, or spray. Stir well before use and allow 4 hours between coats.',
+    icon: '🖌️',
     accent: '#0b2563',
     facts: [
       'Stir thoroughly before use',
@@ -42,7 +42,7 @@ const steps = [
     step: '04',
     title: 'Clean Up & Enjoy',
     desc: 'Clean tools with water immediately after use. Seal the tin tightly and store in a cool dry place. Then enjoy your beautifully finished space.',
-    icon: '\u2728',
+    icon: '✨',
     accent: '#2d8a4e',
     facts: [
       'Rinse tools with water immediately',
@@ -67,7 +67,7 @@ export default function HowItWorks() {
   }, [])
 
   return (
-    <section className={styles.section} ref={ref}>
+    <section className={styles.section} id="how-it-works" ref={ref}>
       <div className={styles.blob1} />
       <div className={styles.blob2} />
 
