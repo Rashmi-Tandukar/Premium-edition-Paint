@@ -40,7 +40,7 @@ export default function Footer() {
                 <h4 className={styles.colHead}>{h}</h4>
                 <ul className={styles.list}>
                   {links.map(l => (
-                    <li key={l}><a href={l === 'Contact Us' ? '#contact' : '#'} className={styles.lnk}>{l}</a></li>
+                    <li key={l} className={styles.lnk}>{l}</li>
                   ))}
                 </ul>
               </div>
@@ -54,9 +54,9 @@ export default function Footer() {
           <div className={styles.bottomInner}>
             <p>© 2025 Premium Edition Paint. All rights reserved. Registered in England &amp; Wales.</p>
             <div className={styles.legal}>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms &amp; Conditions</a>
-              <a href="#">Cookie Policy</a>
+              <span>Privacy Policy</span>
+              <span>Terms &amp; Conditions</span>
+              <span>Cookie Policy</span>
             </div>
           </div>
         </div>

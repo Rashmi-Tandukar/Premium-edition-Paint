@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
+import Contact from './ContactUs.jsx'
 
 const announcements = [
   '🏆 Price Match Guarantee — Found It Cheaper? We Beat It!',
@@ -55,6 +56,7 @@ export default function Navbar() {
   const [annoFade, setAnnoFade] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [contactOpen, setContactOpen] = useState(false)
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -122,7 +124,7 @@ export default function Navbar() {
                 <div className={styles.logoMark}>
                   <img
                     src="/logo_final.png"
-                    alt="Higgsfield Logo"
+                    alt="Premium Edition Paint Logo"
                     style={{ width: '64px', height: '64px', objectFit: 'contain', display: 'block' }}
                   />
                 </div>
@@ -135,7 +137,7 @@ export default function Navbar() {
                 </div>
               </a>
 
-              {/* Centre tagline — replaces search bar */}
+              {/* Centre tagline */}
               <div className={styles.taglineBlock}>
                 <p className={styles.taglineMain}>Britain's Most Trusted Paint Specialists</p>
                 <p className={styles.taglineSub}>
@@ -149,7 +151,7 @@ export default function Navbar() {
 
               {/* Right actions */}
               <div className={styles.actions}>
-                <a href="tel:01484972416" className={styles.phoneBlock}>
+                <a href="tel:+447878962923" className={styles.phoneBlock}>
                   <div className={styles.phoneIconWrap}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.3 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -169,12 +171,18 @@ export default function Navbar() {
                     <span>Help</span>
                   </a>
 
-                  <a href="#" className={styles.iconBtn} title="Account">
+                  {/* ── Contact (replaces Login) ── */}
+                  <button
+                    className={styles.iconBtn}
+                    title="Contact Us"
+                    onClick={() => setContactOpen(true)}
+                  >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
                     </svg>
-                    <span>Login</span>
-                  </a>
+                    <span>Contact</span>
+                  </button>
 
                   <a href="#" className={styles.wishBtn} title="Wishlist">
                     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -232,6 +240,9 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* ── Contact Modal ── */}
+      {contactOpen && <Contact onClose={() => setContactOpen(false)} />}
     </>
   )
 }
