@@ -18,10 +18,10 @@ const SIZE_OPTIONS_2 = ['20L (Pack of 4 x 5L)']
 // Image shown when each size is selected (null = use product's own 1L image)
 const SIZE_IMAGES = {
   '1L':                    null,
-  '2.5L':                  '/paint/paint.jpg',
-  '5L':                    '/paint/paint.jpg',
-  '10L (Pack of 2 x 5L)':  '/paint/paint.jpg',
-  '20L (Pack of 4 x 5L)':  '/paint/paint.jpg',
+  '2.5L':                  null,
+  '5L':                    null,
+  '10L (Pack of 2 x 5L)':  null,
+  '20L (Pack of 4 x 5L)':  null,
 }
 
 // Default gallery — switches to selected colour image on click

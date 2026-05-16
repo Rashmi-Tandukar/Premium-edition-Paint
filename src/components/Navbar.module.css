@@ -116,6 +116,9 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  padding: 0 20px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 /* Logo */
@@ -138,11 +141,11 @@
   line-height: 1.1;
 }
 .logoTop {
-  font-size: 0.62rem;
-  font-weight: 600;
-  color: #5a6a8a;
+  font-size: 0.68rem;
+  font-weight: 900;
+  color: #0d1a5e;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
 }
 .logoBottom {
   display: flex;
@@ -150,10 +153,10 @@
   gap: 6px;
 }
 .logoPaint {
-  font-size: 1.18rem;
+  font-size: 1.22rem;
   font-weight: 900;
-  color: #0d1a5e;
-  letter-spacing: 0.06em;
+  color: #1a3a9f;
+  letter-spacing: 0.08em;
 }
 .logoTag {
   font-size: 0.55rem;
@@ -165,7 +168,7 @@
   letter-spacing: 0.06em;
 }
 
-/* ── Tagline block (replaces search bar) ── */
+/* ── Tagline block ── */
 .taglineBlock {
   flex: 1;
   display: flex;
@@ -256,24 +259,29 @@
 .iconGroup {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 8px;
 }
 .iconBtn {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 2px;
-  padding: 6px 10px;
-  border-radius: 6px;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 8px;
   text-decoration: none;
   color: #1e2d50;
-  transition: background 0.2s, color 0.2s;
-  font-size: 0.6rem;
+  background: none;
+  border: 1.5px solid #e0e5f0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap;
 }
-.iconBtn:hover { background: #f0f4ff; color: #1a3a9f; }
+.iconBtn:hover { background: #f0f4ff; color: #1a3a9f; border-color: #1a3a9f; }
 
 .wishBtn {
   position: relative;
@@ -320,6 +328,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.04em;
   transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
 }
 .cartBtn:hover { background: #0d1a5e; transform: translateY(-1px); }
 .cartBadge {
@@ -356,6 +365,7 @@
   border-radius: 6px;
   transition: background 0.2s;
   flex-shrink: 0;
+  margin-left: auto;
 }
 .mToggle:hover { background: #f0f4ff; }
 .mToggle span {
@@ -405,6 +415,8 @@
   display: flex;
   align-items: stretch;
   position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .trustCard {
@@ -505,6 +517,9 @@
   .annoContent {
     padding: 0 16px;
   }
+  .mainInner {
+    padding: 0 16px;
+  }
   .trustCardInner {
     padding: 16px 18px;
     gap: 12px;
@@ -521,13 +536,12 @@
 
 /* Tablets landscape */
 @media (max-width: 900px) {
-  .mToggle { display: flex; }
+  .mToggle { display: none; }
   .taglineBlock { display: none; }
-  .iconBtn span { display: none; }
-  .iconBtn { padding: 8px; }
+  .iconBtn { padding: 7px 11px; font-size: 0.66rem; gap: 5px; }
   .trustCardInner { padding: 14px 16px; gap: 10px; }
   .trustCard:nth-child(n+3) { display: none; }
-  .mainInner { gap: 12px; }
+  .mainInner { gap: 10px; padding: 0 16px; }
 }
 
 /* Tablets portrait */
@@ -536,18 +550,21 @@
     padding: 8px 0;
   }
   .mainInner {
-    gap: 8px;
-    padding: 0 12px;
+    gap: 10px;
+    padding: 0 14px;
   }
   .logoMark img {
-    width: 52px !important;
-    height: 52px !important;
+    width: 48px !important;
+    height: 48px !important;
   }
   .logoPaint {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   .logoTop {
-    font-size: 0.55rem;
+    font-size: 0.58rem;
+  }
+  .logoText {
+    display: flex;
   }
   .actions {
     gap: 6px;
@@ -555,14 +572,6 @@
   .cartBtn {
     padding: 8px 12px;
     font-size: 0.7rem;
-  }
-  .cartLabel {
-    display: none;
-  }
-  .cartBtn {
-    padding: 9px;
-    border-radius: 50%;
-    gap: 0;
   }
   .trustCardInner {
     padding: 12px 14px;
@@ -580,10 +589,11 @@
   }
 }
 
-/* Large phones */
+/* Large phones — KEY FIX ZONE */
 @media (max-width: 600px) {
   .trustStrip { display: none; }
-  .actions { gap: 4px; }
+
+  .annoRow { height: 36px; }
   .annoContent { gap: 8px; padding: 0 12px; }
   .annoDots { display: none; }
   .annoText { font-size: 0.67rem; }
@@ -593,23 +603,84 @@
     gap: 4px;
   }
   .subLink svg { display: none; }
+
+  .mainRow { padding: 10px 0; }
   .mainInner {
-    padding: 0 10px;
-    gap: 6px;
+    padding: 0 12px;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  /* Logo: always show full name on mobile */
+  .logo {
+    gap: 8px;
+    flex-shrink: 1;
   }
   .logoMark img {
-    width: 44px !important;
-    height: 44px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
-  .logoTop { display: none; }
-  .logoPaint { font-size: 0.9rem; }
+  .logoText {
+    display: flex;
+  }
+  .logoTop {
+    font-size: 0.5rem;
+    letter-spacing: 0.06em;
+    color: #5a6a8a;
+    display: block;
+  }
+  .logoPaint {
+    font-size: 0.95rem;
+  }
+  .logoTag {
+    font-size: 0.48rem;
+    padding: 1px 4px;
+  }
+
+  /* Actions: push to right edge */
+  .actions {
+    gap: 4px;
+    margin-left: auto;
+  }
+
+  /* Show only wish + cart on small screens, keep Help/Contact as icon-only */
   .iconBtn {
-    padding: 6px;
+    padding: 7px 9px;
+    font-size: 0;
+    border: none;
+    gap: 0;
+    background: #f0f4ff;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
   }
+  .iconBtn svg { width: 17px; height: 17px; }
+
   .wishBtn {
     width: 34px;
     height: 34px;
   }
+  .wishBtn svg { width: 16px; height: 16px; }
+
+  /* Cart: icon only (circle) */
+  .cartBtn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    gap: 0;
+    justify-content: center;
+  }
+  .cartLabel { display: none; }
+  .cartBtn svg { width: 18px; height: 18px; }
+  .cartBadge { top: -5px; right: -5px; }
+
+  .mToggle {
+    margin-left: 6px;
+    padding: 6px;
+  }
+  .mToggle span { width: 20px; }
 }
 
 /* Small phones */
@@ -618,25 +689,34 @@
   .annoText { font-size: 0.6rem; }
   .subLink { display: none; }
   .annoPulse { width: 6px; height: 6px; }
-  .mainInner { padding: 0 8px; gap: 4px; }
+
+  .mainInner { padding: 0 10px; }
+
   .logoMark img {
-    width: 36px !important;
-    height: 36px !important;
+    width: 32px !important;
+    height: 32px !important;
   }
-  .logoPaint { font-size: 0.8rem; }
+  .logoTop {
+    display: block;
+    font-size: 0.48rem;
+    letter-spacing: 0.05em;
+  }
+  .logoPaint { font-size: 0.82rem; }
   .logoTag { display: none; }
+  .logoBottom { gap: 0; }
+
+  .logo { gap: 6px; }
+
   .iconGroup { gap: 0; }
-  .iconBtn { padding: 5px; }
-  .iconBtn svg { width: 16px; height: 16px; }
   .wishBtn {
     width: 30px;
     height: 30px;
   }
-  .wishBtn svg { width: 16px; height: 16px; }
   .cartBtn {
-    padding: 7px;
+    width: 32px;
+    height: 32px;
   }
-  .cartBtn svg { width: 17px; height: 17px; }
-  .mToggle { padding: 6px; }
+  .cartBtn svg { width: 16px; height: 16px; }
+  .mToggle { padding: 5px; }
   .mToggle span { width: 18px; }
 }
