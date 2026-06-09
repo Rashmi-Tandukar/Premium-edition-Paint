@@ -1,0 +1,156 @@
+/* =============================================
+   PREMIUM EDITION PAINT — Floating Social Bar
+   Position: RIGHT side, vertically centered
+   ============================================= */
+
+.floatingWrapper {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ── Base button ── */
+.socialBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.socialBtn svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.socialBtn:hover {
+  transform: scale(1.15) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Tooltip ── */
+.tooltip {
+  position: absolute;
+  right: 58px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(20, 20, 20, 0.85);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: rgba(20, 20, 20, 0.85);
+}
+
+.socialBtn:hover .tooltip {
+  opacity: 1;
+}
+
+/* ── Official brand colours ── */
+.instagram {
+  background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%,
+    #fd5949 45%, #d6249f 60%,
+    #285aeb 90%);
+    animation: floatIG 3s ease-in-out infinite;
+}
+
+.facebook {
+  background: #1877f2;
+  animation: floatFB 3s ease-in-out infinite;
+  animation-delay: 0.6s;
+
+}
+
+.whatsapp {
+  background: #25d366;
+  animation: floatWA 3s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.tiktok {
+  background: #010101;
+  animation: floatTK 3s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+
+.socialBtn:hover {
+  transform: scale(1.15) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation-play-state: paused;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .floatingWrapper {
+    right: 12px;
+    bottom: 24px;
+    gap: 10px;
+  }
+
+  .socialBtn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .socialBtn svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}
+
+/* ── Idle float animations ── */
+@keyframes floatIG {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25%       { transform: translateY(-5px) rotate(-3deg); }
+  75%       { transform: translateY(3px) rotate(2deg); }
+}
+
+@keyframes floatFB {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  30%       { transform: translateY(-6px) rotate(2deg); }
+  70%       { transform: translateY(2px) rotate(-2deg); }
+}
+
+@keyframes floatWA {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  40%       { transform: translateY(-4px) rotate(-2deg); }
+  80%       { transform: translateY(4px) rotate(3deg); }
+}
+
+@keyframes floatTK {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  20%       { transform: translateY(-6px) rotate(3deg); }
+  60%       { transform: translateY(3px) rotate(-2deg); }
+}

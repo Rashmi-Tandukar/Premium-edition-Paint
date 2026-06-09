@@ -8,10 +8,12 @@ import Testimonials from './components/testimonials'
 import FAQ from './components/faq'
 import ContactUs from './components/ContactUs'
 import Footer from './components/Footer'
+import FloatingSocial from './components/FloatingSocial'
 
 export default function App() {
   return (
     <>
+      <FloatingSocial />
       <Navbar />
       <Hero />
       <TopProducts />
