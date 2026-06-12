@@ -4,7 +4,7 @@ const cols = {
   'Find Information': ['FAQ\'s', 'Delivery Information', 'Returns Policy', 'Track Your Order', 'Paint Calculator', 'Colour Matching', 'Contact Us'],
   'Paint Categories': ['Interior Paints', 'Exterior Paints', 'Wood, Furniture & Garden'],
   'About Us': ['About Premium Edition Paint', 'Our Sustainability', 'Press & Media', 'Careers', 'Affiliate Programme'],
-  'Find Us Online': ['Facebook', 'Instagram', 'YouTube', 'Pinterest', 'TikTok'],
+  'Find Us Online': ['Facebook', 'Instagram','TikTok'],
 }
 
 export default function Footer() {
