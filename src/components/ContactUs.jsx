@@ -84,7 +84,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <strong>Phone</strong>
-                  <span>+44 7878 962923</span>
+                  <span>+44 20 8037 9334</span>
                 </div>
               </div>
 
