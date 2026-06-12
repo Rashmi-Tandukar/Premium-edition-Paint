@@ -157,7 +157,7 @@ export default function Navbar() {
                   </div>
                   <div className={styles.phoneTextWrap}>
                     <span className={styles.phoneLabel}>Call Us</span>
-                    <span className={styles.phoneNum}>+44 7778 734494</span>
+                    <span className={styles.phoneNum}>+44 20 8037 9334</span>
                   </div>
                 </a>
 

@@ -28,7 +28,7 @@ export default function Footer() {
               </div>
               <p className={styles.tagline}>The UK's leading online paint retailer. Professional-grade products at trade prices — delivered to your door.</p>
               <div className={styles.contact}>
-                <span>📞+44 7878 962923</span>
+                <span>📞+44 20 8037 9334</span>
                 <span>✉️ premiumpaint195@hotmail.com</span>
                 <span>🕐 Mon–Fri: 9am – 5pm</span>
               </div>
